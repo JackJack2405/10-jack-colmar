@@ -2,264 +2,250 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Colmar Academy</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <style type="text/tailwindcss">
       @theme {
-        --font-sans: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-        --color-brand: #355ea8;
-      }
-      @layer utilities {
-        .container-pad { @apply max-w-[1100px] mx-auto px-[24px]; } 
-        .eyebrow { @apply uppercase tracking-widest text-[0.78rem] font-semibold text-[--color-brand]; }
+        --font-sans: "Poppins", sans-serif;
+        --font-inter: "Inter", sans-serif;
       }
     </style>
   </head>
 
-  <body class="min-h-dvh bg-white text-slate-800 font-sans">
-    <!-- Header mobile   -->
-    <header class="sticky top-0 z-50 bg-white/95 border-b border-slate-200 backdrop-blur">
-      <div class="container-pad h-[64px] flex items-center justify-between">
-      
-        <a href="#" class="inline-flex items-center gap-2 font-bold">
-          <img src="images/ic-logo.svg" alt="Colmar Academy logo" class="h-7 w-auto" />
-          <span class="hidden md:inline text-[--color-brand]">Colmar Academy</span>
-        </a>
-
-        <!-- Nav -->
-        <nav aria-label="Primary" class="flex items-center gap-[16px] text-slate-700">
-          <a href="#on-campus" aria-label="On campus" class="inline-flex items-center gap-2 hover:text-[--color-brand]">
-            <img src="images/ic-on-campus.svg" alt="" class="h-5 w-5" />
-            <span class="hidden md:inline">On campus</span>
-          </a>
-          <a href="#online" aria-label="Online" class="inline-flex items-center gap-2 hover:text-[--color-brand]">
-            <img src="images/ic-online.svg" alt="" class="h-5 w-5" />
-            <span class="hidden md:inline">Online</span>
-          </a>
-          <a href="#companies" class="hidden md:inline hover:text-[--color-brand]">For companies</a>
-          <a href="#login" aria-label="Sign in" class="inline-flex items-center gap-2 hover:text-[--color-brand]">
-            <img src="images/ic-login.svg" alt="" class="h-5 w-5" />
-            <span class="hidden md:inline">Sign in</span>
-          </a>
-        </nav>
-      </div>
+  <body class="min-h-dvh max-w-dvw">
+    <header class="flex nevbar h-16">
+      <button class="navItem md:mx-6">
+        <img class="inline" src="/images/ic-logo.svg" />
+        <a class="navText"><strong>COLMAR</strong>ACADEMY</a>
+      </button>
+      <button class="navItem md:ml-auto md:mr-4">
+        <img class="icon" src="/images/ic-on-campus.svg" />
+        <a class="navText">On campus</a>
+      </button>
+      <button class="navItem md:mr-4">
+        <img class="icon" src="/images/ic-online.svg" />
+        <a class="navText">Online</a>
+      </button>
+      <button class="navItem hidden md:mr-4 md:block">
+        <a class="navText">For companies</a>
+      </button>
+      <button class="navItem md:mr-4">
+        <img class="icon" src="/images/ic-login.svg" />
+        <a class="navText">Sign in</a>
+      </button>
     </header>
-
-  
-    <section id="online" class="border-b border-slate-200 bg-[#d9d9d9]">
-      <div class="container-pad pt-[64px] pb-[32px]">
-        <div class="grid md:grid-cols-[60%_auto] gap-[32px] items-center">
-          <div>
-            <img src="images/banner.jpg" alt="Students studying together" class="w-full h-full object-cover rounded-none" />
+    <main>
+      <section class="hero bg-gray-200">
+        <div class="flex flex-col md:py-2 md:mx-6 md:items-center md:flex-row">
+          <div class="imgHolder md:max-w-6/10">
+            <img src="/images/banner.jpg" />
           </div>
-
-          <div>
-            <h1 class="text-[32px] sm:text-[36px] md:text-[40px] leading-tight font-semibold text-slate-900 mb-[16px]">
-              Learn something<br />new everyday
-            </h1>
-            <p class="text-slate-700 max-w-[520px] mb-[24px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </p>
-            <a href="#start-learning"
-               class="inline-flex items-center justify-center bg-[#4a4a4a] text-white font-medium px-4 py-2 rounded-none">
+          <div class="heroDesc px-4 md:p-0 md:mx-6 md:max-w-4/10 md:max-h-fit">
+            <h1 class="mt-8 md:mt-0">Learn something<br />new everyday</h1>
+            <h2 class="text-2xl mt-8">
+              Lorem ipsum dolor sit amet,<br />
+              consectetur adipiscing elit.
+            </h2>
+            <button class="w-full mt-6 mb-8 p-2 bg-gray-400 text-white">
               Start here
-            </a>
+            </button>
           </div>
         </div>
-      </div>
-    </section>
-
-
-    <section id="on-campus" class="border-b border-slate-200 py-8">
-      <div class="container-pad grid md:grid-cols-2 gap-[32px]">
-    
-        <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
-          <img src="images/information-main.jpg" alt="Student reading a book outdoors" class="w-full h-full object-cover rounded-none" />
-          <div class="p-[24px]">
-            <div class="eyebrow mb-1">Practice</div>
-            <h3 class="text-[28px] font-semibold leading-tight mb-[8px]">It doesn’t hurt to keep practicing</h3>
-            <p class="text-slate-600">
-              “Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque.”
-            </p>
-          </div>
-        </article>
-
-  
-        <div class="grid gap-[16px]">
-         
-          <article class="bg-white border border-slate-300 p-3 grid grid-cols-[120px_1fr] gap-3 items-center rounded-none">
-            <picture class="overflow-hidden rounded-none">
-              <source media="(max-width:520px)" srcset="images/information-orientation-mobile.jpg" />
-              <img src="images/information-orientation.jpg" alt="Orientation day details" class="h-full w-full object-cover rounded-none" />
-            </picture>
-            <div>
-              <h4 class="text-[22px] font-semibold leading-tight mb-[8px]">Orientation date</h4>
-              <p class="text-sm text-slate-600 mb-[8px]">Tue 10/11 & Wed 10/12: 8am–3pm</p>
-              <a href="#" class="inline-block text-[--color-brand] font-semibold text-sm">Read more</a>
-            </div>
-          </article>
-
-          <article class="bg-white border border-slate-300 p-3 grid grid-cols-[120px_1fr] gap-3 items-center rounded-none">
-            <picture class="overflow-hidden rounded-none">
-              <source media="(max-width:520px)" srcset="images/information-campus-mobile.jpg" />
-              <img src="images/information-campus.jpg" alt="Our campus interior with wood walls and plants" class="h-full w-full object-cover rounded-none" />
-            </picture>
-            <div>
-              <h4 class="text-[22px] font-semibold leading-tight mb-[8px]">Our campus</h4>
-              <p class="text-sm text-slate-600 mb-[8px]">Find which campus is close by you</p>
-              <a href="#" class="inline-block text-[--color-brand] font-semibold text-sm">Read more</a>
-            </div>
-          </article>
-
-        
-          <article class="bg-white border border-slate-300 p-3 grid grid-cols-[120px_1fr] gap-3 items-center rounded-none">
-            <picture class="overflow-hidden rounded-none">
-              <source media="(max-width:520px)" srcset="images/information-guest-lecture-mobile.jpg" />
-              <img src="images/information-guest-lecture.jpg" alt="Special guest lecturer portrait" class="h-full w-full object-cover rounded-none" />
-            </picture>
-            <div>
-              <h4 class="text-[22px] font-semibold leading-tight mb-[8px]">Our guest lecture</h4>
-              <p class="text-sm text-slate-600 mb-[8px]">
-                Join a keynote with Oliver Sack about music in medical treatment
-              </p>
-              <a href="#" class="inline-block text-[--color-brand] font-semibold text-sm">Read more</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="start-learning" class="bg-slate-50 border-b border-slate-200 py-8">
-      <div class="container-pad">
-        <h2 class="text-center text-[32px] font-semibold mb-[32px]">Start learning</h2>
-
-
-        <div class="hidden sm:grid gap-[32px] sm:grid-cols-2 lg:grid-cols-3 mb-[32px]">
-       
-          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
-            <img src="images/course-software.jpg" alt="Software" class="w-full object-cover rounded-none" />
-            <div class="p-[16px]">
-              <h3 class="text-[22px] font-semibold mb-[8px]">Software engineering</h3>
-              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
-              <p class="text-slate-600 text-[15px]">Web Development, Mobile Development, iOT, APIs</p>
-            </div>
-          </article>
-    
-          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
-            <img src="images/course-computer-art.jpg" alt="Computer art" class="w-full object-cover rounded-none" />
-            <div class="p-[16px]">
-              <h3 class="text-[22px] font-semibold mb-[8px]">Computer art</h3>
-              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
-              <p class="text-slate-600 text-[15px]">
-                Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation
-              </p>
-            </div>
-          </article>
-    
-          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
-            <img src="images/course-design.jpg" alt="Design" class="w-full object-cover rounded-none" />
-            <div class="p-[16px]">
-              <h3 class="text-[22px] font-semibold mb-[8px]">Design</h3>
-              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
-              <p class="text-slate-600 text-[15px]">User Experience Design, User Research, Visual Design</p>
-            </div>
-          </article>
-    
-          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
-            <img src="images/course-data.jpg" alt="Data" class="w-full object-cover rounded-none" />
-            <div class="p-[16px]">
-              <h3 class="text-[22px] font-semibold mb-[8px]">Data</h3>
-              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
-              <p class="text-slate-600 text-[15px]">Data Science, Big Data, SQL, Data Visualization</p>
-            </div>
-          </article>
-        
-          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
-            <img src="images/course-business.jpg" alt="Business" class="w-full object-cover rounded-none" />
-            <div class="p-[16px]">
-              <h3 class="text-[22px] font-semibold mb-[8px]">Business</h3>
-              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
-              <p class="text-slate-600 text-[15px]">Product Development, Business Development, Startup</p>
-            </div>
-          </article>
-   
-          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
-            <img src="images/course-marketing.jpg" alt="Marketing" class="w-full object-cover rounded-none" />
-            <div class="p-[16px]">
-              <h3 class="text-[22px] font-semibold mb-[8px]">Marketing</h3>
-              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
-              <p class="text-slate-600 text-[15px]">Analytics, Content Marketing, Mobile Marketing</p>
-            </div>
-          </article>
-        </div>
-
-  
-        <div class="sm:hidden grid gap-[16px] mb-[32px]">
-          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Software engineering</div>
-          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Computer art</div>
-          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Design</div>
-          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Data</div>
-          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Business</div>
-          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Marketing</div>
-        </div>
-      </div>
-    </section>
-
-    
-    <section id="thesis" class="py-8">
-      <div class="container-pad">
-        <h2 class="text-center text-[32px] font-semibold mb-[32px]">Thesis exhibit</h2>
-
-        <div class="grid md:grid-cols-[60%_auto] gap-[24px]">
-      
-          <div>
-            <div class="w-full aspect-video bg-[#dcdcdc] border border-slate-300 flex items-center justify-center rounded-none mb-[24px]">
-              <video class="w-full h-full object-cover rounded-none" controls preload="metadata" poster="images/information-main.jpg">
-                <source src="videos/thesis.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <h3 class="text-[22px] font-semibold mb-[8px]">Reimagine urban</h3>
-            <p class="text-slate-600 mb-[32px]">
+      </section>
+      <section class="information bg-white">
+        <div class="flex flex-col md:mx-6 md:items-start md:flex-row">
+          <div class="imgHolder hidden md:w-6/10 md:inline-block">
+            <img src="/images/information-main.jpg" />
+            <h1 class="pt-8">It doesn't hurt to keep practicing</h1>
+            <p class="mt-6">
               “Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque.
               Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula.”
             </p>
+            <p><br />Emanuel, Sr Strategist at Hiring.com</p>
           </div>
-
-      
-          <div class="grid gap-[16px]">
-            <article class="bg-white border border-slate-300 p-3 grid grid-cols-[35%_65%] gap-[16px] items-center rounded-none">
-              <img src="images/thesis-fisma.jpg" alt="Fisma prototype" class="w-full h-full object-cover rounded-none" />
-              <div>
-                <h4 class="text-[20px] font-semibold mb-[8px]">Fisma: Design and Prototype</h4>
-                <p class="text-sm text-slate-600">Designer showcase of new prototype product</p>
+          <div class="info_RC flex-col m-4 md:m-0 md:pt-0 md:pl-4 md:w-4/10">
+            <div class="itemHolder md:pb-4 md:pl-4 md:flex">
+              <div class="imgHolder md:w-35/100">
+                <img
+                  class="md:hidden"
+                  src="/images/information-orientation-mobile.jpg"
+                />
+                <img
+                  class="hidden md:inline"
+                  src="/images/information-orientation.jpg"
+                />
               </div>
-            </article>
-            <article class="bg-white border border-slate-300 p-3 grid grid-cols-[auto_1fr] gap-[16px] items-center rounded-none">
-              <img src="images/thesis-now-and-then.jpg" alt="Now and then" class="w-[240px] h-[160px] object-cover rounded-none" />
-              <div>
-                <h4 class="text-[20px] font-semibold mb-[8px]">Now and then</h4>
-                <p class="text-sm text-slate-600">Research study about New York</p>
+              <div class="desc p-4 mb-12 md-inline max-h-65/100">
+                <h2>Orientation date</h2>
+                <h3>Tue 10/11 & Wed 10/12: 8am-3pm</h3>
+                <a class="text-blue-500"> Read more</a>
               </div>
-            </article>
+            </div>
+            <div class="itemHolder md:py-4 md:pl-4 md:flex">
+              <div class="imgHolder md:w-35/100">
+                <img
+                  class="md:hidden"
+                  src="/images/information-campus-mobile.jpg"
+                />
+                <img
+                  class="hidden md:inline"
+                  src="/images/information-campus.jpg"
+                />
+              </div>
+              <div class="desc p-4 mb-12 md-inline max-h-65/100">
+                <h2>Our campus</h2>
+                <h3>Find which campus is close by you</h3>
+                <a class="text-blue-500"> Read more</a>
+              </div>
+            </div>
+            <div class="itemHolder mb-4 md:py-4 md:pl-4 md:flex md:bg-gray-100">
+              <div class="imgHolder md:w-35/100">
+                <img
+                  class="md:hidden"
+                  src="/images/information-guest-lecture-mobile.jpg"
+                />
+                <img
+                  class="hidden md:inline"
+                  src="/images/information-guest-lecture.jpg"
+                />
+              </div>
+              <div class="desc p-4 md:max-w-65/100 md-inline">
+                <h2>Our guest lecture</h2>
+                <h3>
+                  Join a keynote with Oliver Sack about music in medical
+                  treatment
+                </h3>
+                <a class="text-blue-500"> Read more</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-
-    <footer class="border-t border-slate-200 py-[16px] text-sm text-slate-600">
-      <div class="container-pad flex items-center justify-between flex-wrap gap-3">
-        <div>© 2016 Colmar Academy. All rights reserved</div>
-        <nav class="flex items-center gap-4">
-          <a href="#">Terms</a>
-          <a href="#">Privacy</a>
-        </nav>
-      </div>
+      </section>
+      <section class="course md:bg-gray-200">
+          <div class="secHeading">
+            <h1>Start learning</h1>
+          </div>
+          <div class="pb-8 grid gap-2 px-4 md:grid-cols-3 md:gap-8 md:px-18">
+            <div class="card px-4 pt-4 pb-6 md:p-0">
+              <div class="imgHolder hidden md:block">
+                <img src="images/course-software.jpg" />
+              </div>
+              <h2 class="md:mt-4 md:ml-4">Software engineering</h2>
+              <div class="courseDesc px-4 hidden md:block">
+                <h3 class="my-2">COURSES</h3>
+                <h3>Web Development, Mobile Development, iOT, APIs</h3>
+              </div>
+            </div>
+            <div class="card px-4 pt-4 pb-6 md:p-0">
+              <div class="imgHolder hidden md:block">
+                <img src="images/course-computer-art.jpg" />
+              </div>
+              <h2 class="md:mt-4 md:ml-4">Computer Art</h2>
+              <div class="courseDesc px-4 mb-6 hidden md:block">
+                <h3 class="my-2">COURSES</h3>
+                <h3>
+                  Imaging & Design, Web Design, Motion Graphics & Visual
+                  Effects, Computer Animation
+                </h3>
+              </div>
+            </div>
+            <div class="card px-4 pt-4 pb-6 md:p-0">
+              <div class="imgHolder hidden md:block">
+                <img src="images/course-design.jpg" />
+              </div>
+              <h2 class="md:mt-4 md:ml-4">Design</h2>
+              <div class="courseDesc px-4 mb-6 hidden md:block">
+                <h3 class="my-2">COURSES</h3>
+                <h3>User Experience Design, User Research, Visual Design</h3>
+              </div>
+            </div>
+            <div class="card px-4 pt-4 pb-6 md:p-0">
+              <div class="imgHolder hidden md:block">
+                <img src="images/course-data.jpg" />
+              </div>
+              <h2 class="md:mt-4 md:ml-4">Data</h2>
+              <div class="courseDesc px-4 mb-6 hidden md:block">
+                <h3 class="my-2">COURSES</h3>
+                <h3>Data Science, Big Data, SQL, Data Visualization</h3>
+              </div>
+            </div>
+            <div class="card px-4 pt-4 pb-6 md:p-0">
+              <div class="imgHolder hidden md:block">
+                <img src="images/course-business.jpg" />
+              </div>
+              <h2 class="md:mt-4 md:ml-4">Business</h2>
+              <div class="courseDesc px-4 mb-6 hidden md:block">
+                <h3 class="my-2">COURSES</h3>
+                <h3>Product Development, Business Development, Startup</h3>
+              </div>
+            </div>
+            <div class="card px-4 pt-4 pb-6 md:p-0">
+              <div class="imgHolder hidden md:block">
+                <img src="images/course-marketing.jpg" />
+              </div>
+              <h2 class="md:mt-4 md:ml-4">Marketing</h2>
+              <div class="courseDesc px-4 mb-6 hidden md:block">
+                <h3 class="my-2">COURSE</h3>
+                <h3>Analytics, Content Marketing, Mobile Marketing</h3>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section class="thesis">
+        <div class="secHeading">
+          <h1>Thesis exhibit</h1>
+        </div>
+        <div class="flex flex-col md:mx-6 md:items-start md:flex-row">
+          <div class="vodHolder mb-6 md:w-6/10 md:inline-block">
+            <video src="videos/thesis.mp4" controls></video>
+            <div class="textContainer hidden md:block">
+              <h1 class="pt-6">Reimagine urban</h1>
+              <p class="mt-6">
+                “Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque.
+              Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula.”
+              </p>
+            </div>
+          </div>
+          <div class="thesisRC flex-col md:pl-8 md:w-4/10">
+            <div class="itemHolder hidden md:bg-gray-100 md:p-4 md:flex">
+              <div class="imgHolder md:w-35/100">
+                <img class="hidden md:inline" src="/images/thesis-fisma.jpg" />
+              </div>
+              <div class="descHolder max-w-65/100 p-4 md-inline">
+                <h2>Fisma: Design and Prototype</h2>
+                <h3>Designer showcase of new prototype product</h3>
+              </div>
+            </div>
+            <div class="itemHolder hidden md:p-4 md:flex">
+              <div class="imgHolder max-w-screen-md md:w-35/100">
+                <img
+                  class="hidden md:inline"
+                  src="/images/thesis-now-and-then.jpg"
+                />
+              </div>
+              <div class="descHolder max-w-65/100 p-4 md-inline">
+                <h2>Now and then</h2>
+                <h3>Research study about New York</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer p-4 flex">
+      <h3 class="md:ml-6 text-gray-500">© 2016 Colmar Academy All rights reserved</h3>
+      <a class="hidden md:block md:ml-auto text-gray-500">Terms</a>
+      <a class="hidden md:block md:ml-4 md:mr-6 text-gray-500">Privacy</a>
     </footer>
   </body>
 </html>

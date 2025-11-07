@@ -1,0 +1,112 @@
+h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.navItem {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.navItem:hover {
+    background-color: rgb(242, 242, 242);
+    cursor: pointer;
+}
+
+a,button{
+    cursor: pointer;
+}
+.icon {
+    display: inline;
+}
+
+.navText {
+    display: none;
+}
+
+.secHeading {
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 16px;
+}
+.card{
+    --tw-bg-opacity: 1;
+    background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+@media (min-width: 768px) {
+    .navText {
+        display: inline;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .navItem {
+        height: 32px;
+        flex-grow: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .hero,
+    .information,
+    .course,
+    .thesis {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .secHeading {
+
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom:32px;
+    }
+    .card{
+        background-color: white;
+    }
+}
+
+
+.nevbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+@media (max-width: 767px) {
+  .navItem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nevbar img {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  header {
+    padding-inline: 24px;
+  }
+  .navItem a {
+    font-weight: 500;
+    color: #2c3138; 
+  }
+  .navItem a:hover {
+    color: #355ea8;
+  }
+}
