@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Colmar Academy</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
@@ -16,145 +17,246 @@
       @layer utilities {
         .container-pad { @apply max-w-[1100px] mx-auto px-[24px]; } 
         .eyebrow { @apply uppercase tracking-widest text-[0.78rem] font-semibold text-[--color-brand]; }
-        .card-hover { @apply border border-slate-300 hover:border-[--color-brand] hover:shadow-lg transition; }
       }
     </style>
   </head>
 
-  <body class="min-h-dvh text-slate-800 bg-white font-sans">
-    <header class="sticky top-0 z-50 bg-white border-b border-slate-200">
-  <div class="container-pad h-[64px] flex items-center justify-between">
-    <a href="#" class="inline-flex items-center gap-2 font-bold">
-      <img src="images/ic-logo.svg" alt="Colmar Academy logo" class="h-7 w-auto" />
-      <span class="hidden md:inline text-[--color-brand]">Colmar Academy</span>
-    </a>
-    <nav aria-label="Primary" class="flex items-center gap-[16px] text-slate-700">
-      <a href="#on-campus" class="inline-flex items-center gap-2 hover:text-[--color-brand]">
-        <img src="images/ic-on-campus.svg" alt="On campus" class="h-5 w-5" />
-        <span class="hidden md:inline">On campus</span>
-      </a>
-      <a href="#online" class="inline-flex items-center gap-2 hover:text-[--color-brand]">
-        <img src="images/ic-online.svg" alt="Online" class="h-5 w-5" />
-        <span class="hidden md:inline">Online</span>
-      </a>
-      <a href="#login" class="inline-flex items-center gap-2 hover:text-[--color-brand]">
-        <img src="images/ic-login.svg" alt="Sign in" class="h-5 w-5" />
-        <span class="hidden md:inline">Sign in</span>
-      </a>
-    </nav>
-  </div>
-</header>
+  <body class="min-h-dvh bg-white text-slate-800 font-sans">
+    <!-- Header mobile   -->
+    <header class="sticky top-0 z-50 bg-white/95 border-b border-slate-200 backdrop-blur">
+      <div class="container-pad h-[64px] flex items-center justify-between">
+      
+        <a href="#" class="inline-flex items-center gap-2 font-bold">
+          <img src="images/ic-logo.svg" alt="Colmar Academy logo" class="h-7 w-auto" />
+          <span class="hidden md:inline text-[--color-brand]">Colmar Academy</span>
+        </a>
+
+        <!-- Nav -->
+        <nav aria-label="Primary" class="flex items-center gap-[16px] text-slate-700">
+          <a href="#on-campus" aria-label="On campus" class="inline-flex items-center gap-2 hover:text-[--color-brand]">
+            <img src="images/ic-on-campus.svg" alt="" class="h-5 w-5" />
+            <span class="hidden md:inline">On campus</span>
+          </a>
+          <a href="#online" aria-label="Online" class="inline-flex items-center gap-2 hover:text-[--color-brand]">
+            <img src="images/ic-online.svg" alt="" class="h-5 w-5" />
+            <span class="hidden md:inline">Online</span>
+          </a>
+          <a href="#companies" class="hidden md:inline hover:text-[--color-brand]">For companies</a>
+          <a href="#login" aria-label="Sign in" class="inline-flex items-center gap-2 hover:text-[--color-brand]">
+            <img src="images/ic-login.svg" alt="" class="h-5 w-5" />
+            <span class="hidden md:inline">Sign in</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+  
     <section id="online" class="border-b border-slate-200 bg-[#d9d9d9]">
-      <div class="container-pad pt-[64px] pb-[32px]"> <!-- 64 / 32 px -->
-          <div class="overflow-hidden rounded-none">
-            <img src="images/banner.jpg" alt="Students studying together at a wooden table" class="w-full h-full object-cover" />
+      <div class="container-pad pt-[64px] pb-[32px]">
+        <div class="grid md:grid-cols-[60%_auto] gap-[32px] items-center">
+          <div>
+            <img src="images/banner.jpg" alt="Students studying together" class="w-full h-full object-cover rounded-none" />
           </div>
-          <div class="space-y-3">
-            <h1 class="text-[34px] md:text-[40px] leading-tight font-semibold text-slate-900">
-              Learn something<br/>new everyday
+
+          <div>
+            <h1 class="text-[32px] sm:text-[36px] md:text-[40px] leading-tight font-semibold text-slate-900 mb-[16px]">
+              Learn something<br />new everyday
             </h1>
-            <p class="text-slate-700 max-w-[480px]">
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <p class="text-slate-700 max-w-[520px] mb-[24px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             </p>
             <a href="#start-learning"
-               class="inline-flex w-fit items-center justify-center bg-[#4a4a4a] text-white font-medium px-4 py-2 rounded-none">
+               class="inline-flex items-center justify-center bg-[#4a4a4a] text-white font-medium px-4 py-2 rounded-none">
               Start here
-            </a> 
+            </a>
           </div>
         </div>
       </div>
     </section>
+
+
     <section id="on-campus" class="border-b border-slate-200 py-8">
       <div class="container-pad grid md:grid-cols-2 gap-[32px]">
-        <article class="bg-white border border-slate-300 overflow-hidden">
-          <img src="images/information-main.jpg" alt="Student reading a book outdoors" class="w-full h-full object-cover" />
-          <div class="p-[24px] space-y-2">
-            <div class="eyebrow">Practice</div>
-            <h3 class="text-xl font-semibold">It doesn’t hurt to keep practicing</h3>
-            <p class="text-slate-600">“Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque.”</p>
+    
+        <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
+          <img src="images/information-main.jpg" alt="Student reading a book outdoors" class="w-full h-full object-cover rounded-none" />
+          <div class="p-[24px]">
+            <div class="eyebrow mb-1">Practice</div>
+            <h3 class="text-[28px] font-semibold leading-tight mb-[8px]">It doesn’t hurt to keep practicing</h3>
+            <p class="text-slate-600">
+              “Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque.”
+            </p>
           </div>
         </article>
 
-        <div class="grid gap-[14px]">
-          <article class="card-hover bg-white p-3 grid grid-cols-[120px_1fr] gap-3 items-center">
-            <picture class="overflow-hidden">
+  
+        <div class="grid gap-[16px]">
+         
+          <article class="bg-white border border-slate-300 p-3 grid grid-cols-[120px_1fr] gap-3 items-center rounded-none">
+            <picture class="overflow-hidden rounded-none">
               <source media="(max-width:520px)" srcset="images/information-orientation-mobile.jpg" />
-              <img src="images/information-orientation.jpg" alt="Orientation day details" class="h-full w-full object-cover" />
+              <img src="images/information-orientation.jpg" alt="Orientation day details" class="h-full w-full object-cover rounded-none" />
             </picture>
             <div>
-              <h4 class="font-semibold">Orientation date</h4>
-              <p class="text-sm text-slate-600">Tue 10/11 & Wed 10/12: 8am–3pm</p>
-              <a href="#" class="mt-1 inline-block text-[--color-brand] font-semibold text-sm">Read more</a>
+              <h4 class="text-[22px] font-semibold leading-tight mb-[8px]">Orientation date</h4>
+              <p class="text-sm text-slate-600 mb-[8px]">Tue 10/11 & Wed 10/12: 8am–3pm</p>
+              <a href="#" class="inline-block text-[--color-brand] font-semibold text-sm">Read more</a>
             </div>
           </article>
 
-          <article class="card-hover bg-white p-3 grid grid-cols-[120px_1fr] gap-3 items-center">
-            <picture class="overflow-hidden">
+          <article class="bg-white border border-slate-300 p-3 grid grid-cols-[120px_1fr] gap-3 items-center rounded-none">
+            <picture class="overflow-hidden rounded-none">
               <source media="(max-width:520px)" srcset="images/information-campus-mobile.jpg" />
-              <img src="images/information-campus.jpg" alt="Our campus interior" class="h-full w-full object-cover" />
+              <img src="images/information-campus.jpg" alt="Our campus interior with wood walls and plants" class="h-full w-full object-cover rounded-none" />
             </picture>
             <div>
-              <h4 class="font-semibold">Our campus</h4>
-              <p class="text-sm text-slate-600">Find which campus is close to you</p>
-              <a href="#" class="mt-1 inline-block text-[--color-brand] font-semibold text-sm">Read more</a>
+              <h4 class="text-[22px] font-semibold leading-tight mb-[8px]">Our campus</h4>
+              <p class="text-sm text-slate-600 mb-[8px]">Find which campus is close by you</p>
+              <a href="#" class="inline-block text-[--color-brand] font-semibold text-sm">Read more</a>
             </div>
           </article>
 
-          <article class="card-hover bg-white p-3 grid grid-cols-[120px_1fr] gap-3 items-center">
-            <picture class="overflow-hidden">
+        
+          <article class="bg-white border border-slate-300 p-3 grid grid-cols-[120px_1fr] gap-3 items-center rounded-none">
+            <picture class="overflow-hidden rounded-none">
               <source media="(max-width:520px)" srcset="images/information-guest-lecture-mobile.jpg" />
-              <img src="images/information-guest-lecture.jpg" alt="Special guest lecturer portrait" class="h-full w-full object-cover" />
+              <img src="images/information-guest-lecture.jpg" alt="Special guest lecturer portrait" class="h-full w-full object-cover rounded-none" />
             </picture>
             <div>
-              <h4 class="font-semibold">Special guest lecture</h4>
-              <p class="text-sm text-slate-600">Join a keynote with Oliver Sacks about creative coding.</p>
-              <a href="#" class="mt-1 inline-block text-[--color-brand] font-semibold text-sm">Read more</a>
+              <h4 class="text-[22px] font-semibold leading-tight mb-[8px]">Our guest lecture</h4>
+              <p class="text-sm text-slate-600 mb-[8px]">
+                Join a keynote with Oliver Sack about music in medical treatment
+              </p>
+              <a href="#" class="inline-block text-[--color-brand] font-semibold text-sm">Read more</a>
             </div>
           </article>
         </div>
       </div>
     </section>
+
     <section id="start-learning" class="bg-slate-50 border-b border-slate-200 py-8">
       <div class="container-pad">
-        <h2 class="text-center text-[22px] font-semibold mb-[18px]">Start learning</h2>
-        <div class="grid gap-[16px] sm:grid-cols-2 lg:grid-cols-3">
+        <h2 class="text-center text-[32px] font-semibold mb-[32px]">Start learning</h2>
+
+
+        <div class="hidden sm:grid gap-[32px] sm:grid-cols-2 lg:grid-cols-3 mb-[32px]">
+       
+          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
+            <img src="images/course-software.jpg" alt="Software" class="w-full object-cover rounded-none" />
+            <div class="p-[16px]">
+              <h3 class="text-[22px] font-semibold mb-[8px]">Software engineering</h3>
+              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
+              <p class="text-slate-600 text-[15px]">Web Development, Mobile Development, iOT, APIs</p>
+            </div>
+          </article>
+    
+          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
+            <img src="images/course-computer-art.jpg" alt="Computer art" class="w-full object-cover rounded-none" />
+            <div class="p-[16px]">
+              <h3 class="text-[22px] font-semibold mb-[8px]">Computer art</h3>
+              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
+              <p class="text-slate-600 text-[15px]">
+                Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation
+              </p>
+            </div>
+          </article>
+    
+          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
+            <img src="images/course-design.jpg" alt="Design" class="w-full object-cover rounded-none" />
+            <div class="p-[16px]">
+              <h3 class="text-[22px] font-semibold mb-[8px]">Design</h3>
+              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
+              <p class="text-slate-600 text-[15px]">User Experience Design, User Research, Visual Design</p>
+            </div>
+          </article>
+    
+          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
+            <img src="images/course-data.jpg" alt="Data" class="w-full object-cover rounded-none" />
+            <div class="p-[16px]">
+              <h3 class="text-[22px] font-semibold mb-[8px]">Data</h3>
+              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
+              <p class="text-slate-600 text-[15px]">Data Science, Big Data, SQL, Data Visualization</p>
+            </div>
+          </article>
+        
+          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
+            <img src="images/course-business.jpg" alt="Business" class="w-full object-cover rounded-none" />
+            <div class="p-[16px]">
+              <h3 class="text-[22px] font-semibold mb-[8px]">Business</h3>
+              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
+              <p class="text-slate-600 text-[15px]">Product Development, Business Development, Startup</p>
+            </div>
+          </article>
+   
+          <article class="bg-white border border-slate-300 overflow-hidden rounded-none">
+            <img src="images/course-marketing.jpg" alt="Marketing" class="w-full object-cover rounded-none" />
+            <div class="p-[16px]">
+              <h3 class="text-[22px] font-semibold mb-[8px]">Marketing</h3>
+              <div class="text-xs text-slate-500 uppercase tracking-wide mb-[8px]">Courses</div>
+              <p class="text-slate-600 text-[15px]">Analytics, Content Marketing, Mobile Marketing</p>
+            </div>
+          </article>
+        </div>
+
+  
+        <div class="sm:hidden grid gap-[16px] mb-[32px]">
+          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Software engineering</div>
+          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Computer art</div>
+          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Design</div>
+          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Data</div>
+          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Business</div>
+          <div class="bg-[#e6e6e6] text-slate-800 px-[16px] py-[16px] rounded-none text-[20px] font-semibold">Marketing</div>
         </div>
       </div>
     </section>
 
+    
     <section id="thesis" class="py-8">
-      <div class="container-pad grid md:grid-cols-[1.2fr_0.8fr] gap-[24px]">
-        <div>
-          <h2 class="text-[22px] font-semibold mb-[12px]">Thesis exhibit</h2>
-          <video class="w-full aspect-video bg-black" controls preload="metadata" poster="images/information-main.jpg">
-            <source src="videos/thesis.mp4" type="video/mp4" />
-          </video>
-          <p class="text-slate-600 mt-[10px]">“Suspendisse potenti. Integer lacinia, tortor non varius pellentesque, arcu augue vehicula massa.”</p>
-        </div>
+      <div class="container-pad">
+        <h2 class="text-center text-[32px] font-semibold mb-[32px]">Thesis exhibit</h2>
 
-        <div class="grid gap-[14px]">
-          <article class="bg-white p-3 grid grid-cols-[120px_1fr] gap-3 items-center border border-slate-300">
-            <img src="images/thesis-fisma.jpg" alt="Design process with notes and smartphone" class="h-full w-full object-cover" />
-            <div>
-              <h4 class="font-semibold">Fisma: Design and Prototype</h4>
-              <p class="text-sm text-slate-600">Designer showcase of a new product prototype</p>
+        <div class="grid md:grid-cols-[60%_auto] gap-[24px]">
+      
+          <div>
+            <div class="w-full aspect-video bg-[#dcdcdc] border border-slate-300 flex items-center justify-center rounded-none mb-[24px]">
+              <video class="w-full h-full object-cover rounded-none" controls preload="metadata" poster="images/information-main.jpg">
+                <source src="videos/thesis.mp4" type="video/mp4" />
+              </video>
             </div>
-          </article>
-          <article class="bg-white p-3 grid grid-cols-[120px_1fr] gap-3 items-center border border-slate-300">
-            <img src="images/thesis-now-and-then.jpg" alt="City skyline with Empire State Building" class="h-full w-full object-cover" />
-            <div>
-              <h4 class="font-semibold">Now and then</h4>
-              <p class="text-sm text-slate-600">Research study about urban development</p>
-            </div>
-          </article>
+            <h3 class="text-[22px] font-semibold mb-[8px]">Reimagine urban</h3>
+            <p class="text-slate-600 mb-[32px]">
+              “Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque.
+              Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula.”
+            </p>
+          </div>
+
+      
+          <div class="grid gap-[16px]">
+            <article class="bg-white border border-slate-300 p-3 grid grid-cols-[35%_65%] gap-[16px] items-center rounded-none">
+              <img src="images/thesis-fisma.jpg" alt="Fisma prototype" class="w-full h-full object-cover rounded-none" />
+              <div>
+                <h4 class="text-[20px] font-semibold mb-[8px]">Fisma: Design and Prototype</h4>
+                <p class="text-sm text-slate-600">Designer showcase of new prototype product</p>
+              </div>
+            </article>
+            <article class="bg-white border border-slate-300 p-3 grid grid-cols-[auto_1fr] gap-[16px] items-center rounded-none">
+              <img src="images/thesis-now-and-then.jpg" alt="Now and then" class="w-[240px] h-[160px] object-cover rounded-none" />
+              <div>
+                <h4 class="text-[20px] font-semibold mb-[8px]">Now and then</h4>
+                <p class="text-sm text-slate-600">Research study about New York</p>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
-    <footer class="border-t border-slate-200 py-[18px] text-sm text-slate-600">
+
+
+    <footer class="border-t border-slate-200 py-[16px] text-sm text-slate-600">
       <div class="container-pad flex items-center justify-between flex-wrap gap-3">
         <div>© 2016 Colmar Academy. All rights reserved</div>
         <nav class="flex items-center gap-4">
-          <a href="#">Terms</a> <!-- ไม่มีในmoble -->
+          <a href="#">Terms</a>
           <a href="#">Privacy</a>
         </nav>
       </div>
